@@ -3,7 +3,6 @@
 const header = document.querySelector('.header')
 const burger = document.querySelector('.header__burger')
 const menu = document.querySelector('.header__menu')
-const link = document.querySelector('.header__link')
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -16,10 +15,4 @@ window.addEventListener('scroll', () => {
 burger.addEventListener('click', () => {
     menu.classList.toggle('header__menu_active')
     document.body.classList.toggle('unscroll')
-})
-
-menu.addEventListener('click', (e) => {
-    if (e.target.classList == 'header__link') {
-        menu.classList.remove('header__menu_active')
-    }
 })
